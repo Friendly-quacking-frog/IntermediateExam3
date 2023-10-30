@@ -99,7 +99,7 @@ public class TestMethods {
         //Main difference from clearCollection
         //Delete books by pressing delete button in table
         openPage("profile");
-        while (profilePage.checkTableEntries(0)) {
+        while (!profilePage.checkTableEntries(0)) {
             profilePage.deleteFirst().confirmDelete().acceptAlert();
         }
     }
