@@ -24,7 +24,9 @@ public class LoginPage {
     }
 
     @Step("Submitting password")
-    public void submitLogin(){
+    public void submitLogin() throws InterruptedException {
+        Thread.sleep(500);
         driver.findElement(By.id("login")).click();
+        Thread.sleep(1000);
     }
 }
